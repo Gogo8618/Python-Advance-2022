@@ -10,14 +10,14 @@ def start_spring(**kwargs):
     sort_collection = sorted(new_list.items(), key=lambda x: (-len(x[1]), x[0]))
 
     for key in sort_collection:
-        result += f"{key[0]}\n"
+        result += f"{key[0]}:\n"
         sort_value = sorted(key[1])
         for value in sort_value:
             result += f"-{value}\n"
     return result
 
 
-example_objects = {"Water Lilly": "flower", "Swifts": "bird", "Callery Pear": "tree", "Swallows": "bird",
-                   "Dahlia": "flower", "Tulip": "flower", }
+example_objects = {"Swallow": "bird", "Thrushes": "bird", "Woodpeckers": "bird", "Swallows": "bird", "Warbles": "bird",
+                   "Shrikes": "bird"}
 
 print(start_spring(**example_objects))
